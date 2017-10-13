@@ -1,0 +1,59 @@
+<h3>Hotel <small></small></h3>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <form>
+      <div class="form-group">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" class="form-control" id="txtNombre" placeholder="Nombre del hotel" required>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+              <label for="txtNombre">Direccion</label>
+            <input placeholder="Buscar direccion" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search>
+          </div>
+          <agm-map [latitude]="latitude"
+                   [longitude]="longitude"
+                   [scrollwheel]="false"
+                   [zoom]="zoom">
+                  <agm-marker [latitude]="latitude"
+                              [longitude]="longitude"
+                              >
+                  </agm-marker>
+          </agm-map>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Descripcion</label>
+        <textarea class="form-control" placeholder="Ingrese la descripcion del hotel" rows="3"></textarea>
+      </div>
+      <div class="row">
+        <!-- <div class="col-sm-2 col-xs-12 text-sm-right">
+
+        </div> -->
+        <div class="col-sm-6 col-xs-12 text-center">
+          <label class="lbl-clasificacion">Clasificacion</label>
+          <div class="wrapper">
+            <input type="checkbox" id="st1" value="1" />
+            <label for="st1"></label>
+            <input type="checkbox" id="st2" value="2" />
+            <label for="st2"></label>
+            <input type="checkbox" id="st3" value="3" />
+            <label for="st3"></label>
+            <input type="checkbox" id="st4" value="4" />
+            <label for="st4"></label>
+            <input type="checkbox" id="st5" value="5" />
+            <label for="st5"></label>
+          </div>
+        </div>
+        <div class="col-sm-5 col-xs-12 text-center col-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Destacado
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
